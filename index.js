@@ -30,9 +30,6 @@ app.post("/signup", async (req, res) => {
 app.post("/login", async (req, res) => {
   const { username, secret } = req.body;
 
-  // console.log("Fetch user from DB.");
-  // return res.json({ user: {} });
-
   // Fetch this user from Chat Engine in this project!
   try {
     const r = await axios.get("https://api.chatengine.io/users/me/", {
